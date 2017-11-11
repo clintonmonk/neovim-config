@@ -15,7 +15,11 @@ Plug 'wokalski/autocomplete-flow'
 Plug 'iCyMind/NeoSolarized'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+"Plug 'vim-syntastic/syntastic'
 call plug#end()
+
+" neomake settings
+autocmd! BufWritePost * Neomake
 
 let mapleader = ","
 
@@ -57,6 +61,9 @@ au FileType go nnoremap <Leader>dt <Plug>(go-def-tab)
 au FileType go nnoremap <Leader>i <Plug>(go-info)
 au FileType go nnoremap <Leader>e <Plug>(go-rename)
 
+"let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 " nerdtree settings
 noremap <C-n> :NERDTreeToggle<CR>
 
@@ -65,9 +72,6 @@ let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 
 " vim-jsx settings
 let g:jsx_ext_required = 0
-
-" neomake settings
-autocmd! BufWritePost * Neomake
 
 " general
 set visualbell
