@@ -86,7 +86,8 @@ set visualbell
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set relativenumber
+"set relativenumber
+set nu
 set clipboard=unnamed
 set encoding=utf-8
 set fileencoding=utf-8
