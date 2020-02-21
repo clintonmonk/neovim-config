@@ -46,6 +46,9 @@ set mouse=
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+"let g:formatter_yapf_style = 'pep8'
+"let g:autoformat_verbosemode = 1
+"au BufWritePost * :Autoformat
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
@@ -70,6 +73,7 @@ au FileType go nnoremap <Leader>e <Plug>(go-rename)
 
 " nerdtree settings
 noremap <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
 
 " CtrlP settings
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
